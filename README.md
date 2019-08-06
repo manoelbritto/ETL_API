@@ -7,16 +7,18 @@ Microsoft Azure Cloud:
 Local Machine:
 ETL with SSIS integrated with SQL Server in the Cloud
 Web app integrated with Azure Cloud
-# Data Set
-Data comes from the Toronto Police
-https://data.torontopolice.on.ca/pages/homicide
+## Data Set
 
-# Workflow
+Data comes from the Toronto Police
+
+> https://data.torontopolice.on.ca/pages/homicide
+ 
+## Workflow
 
  ![GitHub Logo](/Screenshots/workflow.png)
 
  
-# ETL – SSIS (Sql Server Integration Service)	
+## ETL – SSIS (Sql Server Integration Service)	
 > Control Flow
 
 
@@ -40,9 +42,11 @@ https://data.torontopolice.on.ca/pages/homicide
 
 ![GitHub Logo](/Screenshots/db_result.png)
 
+## WEB API
 
 > Web app front end:
-https://manoelburgos.azurewebsites.net/
+
+> https://manoelburgos.azurewebsites.net/
  
 ![GitHub Logo](/Screenshots/webapi_front.PNG)
 
@@ -83,8 +87,6 @@ This a list of application that you need to have in your machine:
 
 Also, you need to have a Microsoft Azure account. Then, on your Cloud environment, you can create SQL Server database and Web APP server
 
-
-
 ## Coding tips
 In my WEB API development, I installed the Entity Framework package. And I created some procedures inside the database to be called inside the development
 
@@ -120,7 +122,7 @@ A class that react when you call a GET METHOD
         }
 
 ```
-## Features
+# Features
 
 1. C# .NET
 2. T-SQL
