@@ -1,6 +1,7 @@
 # Project: Track crimes in Toronto-CA
 This Project combines ETL using SSIS to extract data from a CSV file. Also, a WEB API developed in .NET to expose the data in JSON format. Besides, with the JSON results is possible to create analysis or another sort of developments, for instance, a mobile app to track dangers areas based on GPS location.  
-#Technology used in this project:
+
+### Technology used in this project:
 Microsoft Azure Cloud:
 	SQL SERVER
 	WEB APP
