@@ -52,7 +52,7 @@ https://manoelburgos.azurewebsites.net/
  
 
 ## How to call a GET method:
-> URL/API/Crimes
+> url/api/Crimes
 
 > http://manoelburgos.azurewebsites.net/api/Crimes
 
@@ -61,10 +61,15 @@ https://manoelburgos.azurewebsites.net/
 ![GitHub Logo](/Screenshots/get_crimes.png)
 
 url/api/Crimes/{id}
-http://manoelburgos.azurewebsites.net/api/Crimes/Other
-http://manoelburgos.azurewebsites.net/api/Crimes/Shooting
-http://manoelburgos.azurewebsites.net/api/Crimes/Stabbing
- 
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Other
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Shooting
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Stabbing
+
+> Postman results:
+![GitHub Logo](/Screenshots/get_crimes.png)
 
 # Prerequisites 
 This a list of application that you need to have in your machine:
@@ -110,7 +115,7 @@ A class that react when you call a GET METHOD
             return listValue;
         }
 
-
+```
 ## Features
 
 1 . C# .NET
