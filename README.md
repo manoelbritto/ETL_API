@@ -128,5 +128,5 @@ A class that react when you call a GET METHOD
 1. C# .NET
 2. T-SQL
 3. SSIS
-4. RESTFULL API
+4. RESTful API
 
