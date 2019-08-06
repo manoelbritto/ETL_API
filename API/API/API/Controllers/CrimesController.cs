@@ -26,7 +26,7 @@ namespace API.Controllers
         public List<Homicide> Get()
         {
             List<Homicide> listValue = new List<Homicide>();
-
+            //call a database procedure
             var values = contextDB.spAllValue();
 
 
