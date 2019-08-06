@@ -19,7 +19,7 @@ Data comes from the Toronto Police
 
  
 ## ETL – SSIS (Sql Server Integration Service)	
-> Control Flow
+#### Control Flow
 
 
 ![GitHub Logo](/Screenshots/control_flow.png)
@@ -30,7 +30,7 @@ Data comes from the Toronto Police
 3. In case of success, then File System Task will run. This task will move a .csv file to a different folder
 4. In case of fail, then Send Mail Task with an error message
 
-> Data Flow
+#### Data Flow
 
 ![GitHub Logo](/Screenshots/data_flow.png)
 
@@ -38,26 +38,26 @@ Data comes from the Toronto Police
 2. Script Component will do some changes, in this case, it will fill in the columns City and Country because those columns don’t have inside the CSV file
 3. ADO.NET Destination, it connects with SQL Server on the Cloud and integrates the content extracted from CSV file
 
-> SQL Server results:
+#### SQL Server results:
 
 ![GitHub Logo](/Screenshots/db_result.png)
 
 ## WEB API
 
-> Web app front end:
+#### Web app front end:
 
 > https://manoelburgos.azurewebsites.net/
  
 ![GitHub Logo](/Screenshots/webapi_front.PNG)
 
-> API page with features
+#### API page with features
 
 ![GitHub Logo](/Screenshots/doc_api.png)
  
 
 ## How to call a GET method:
 
-> url/api/Crimes
+#### url/api/Crimes
 
 > http://manoelburgos.azurewebsites.net/api/Crimes
 
@@ -65,7 +65,7 @@ Data comes from the Toronto Police
 
 ![GitHub Logo](/Screenshots/get_crimes.png)
 
-> url/api/Crimes/{id}
+#### url/api/Crimes/{id}
 
 > http://manoelburgos.azurewebsites.net/api/Crimes/Other
 
