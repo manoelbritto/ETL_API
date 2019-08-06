@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="generalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Homicide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Event_Unique_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Occurrence_year" Type="varchar" MaxLength="50" />
+          <Property Name="Division" Type="varchar" MaxLength="50" />
+          <Property Name="Homicide_Type" Type="varchar" MaxLength="40" />
+          <Property Name="Occurrence_Date" Type="varchar" MaxLength="50" />
+          <Property Name="Hood_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Neighbourhood" Type="varchar" MaxLength="100" />
+          <Property Name="Lat" Type="varchar" MaxLength="50" />
+          <Property Name="Long" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <Function Name="spAllValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spFilterValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="type" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="generalDBModelStoreContainer">
+          <EntitySet Name="Homicide" EntityType="Self.Homicide" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="generalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Homicide">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Event_Unique_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Occurrence_year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Homicide_Type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Occurrence_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Hood_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Neighbourhood" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="generalDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Homicides" EntityType="Self.Homicide" />
+          <FunctionImport Name="spAllValue" ReturnType="Collection(generalDBModel.spAllValue_Result)" />
+          <FunctionImport Name="spFilterValue" ReturnType="Collection(generalDBModel.spFilterValue_Result)">
+          <Parameter Name="type" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spAllValue_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Event_Unique_ID" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Occurrence_year" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Homicide_Type" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Occurrence_Date" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Hood_ID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Neighbourhood" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Lat" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Long" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="spFilterValue_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Event_Unique_ID" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Occurrence_year" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Homicide_Type" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="Occurrence_Date" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Hood_ID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Neighbourhood" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Lat" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Long" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="80" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="generalDBModelStoreContainer" CdmEntityContainer="generalDBEntities">
+          <EntitySetMapping Name="Homicides">
+            <EntityTypeMapping TypeName="generalDBModel.Homicide">
+              <MappingFragment StoreEntitySet="Homicide">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+                <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+                <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+                <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+                <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spAllValue" FunctionName="generalDBModel.Store.spAllValue">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="generalDBModel.spAllValue_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+                <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+                <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+                <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+                <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spFilterValue" FunctionName="generalDBModel.Store.spFilterValue">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="generalDBModel.spFilterValue_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+                <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+                <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+                <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+                <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="generalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Homicide">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Event_Unique_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Occurrence_year" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Homicide_Type" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Occurrence_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hood_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Neighbourhood" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="generalDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Homicides" EntityType="Self.Homicide" />
+    <FunctionImport Name="spAllValue" ReturnType="Collection(generalDBModel.spAllValue_Result)" />
+    <FunctionImport Name="spFilterValue" ReturnType="Collection(generalDBModel.spFilterValue_Result)">
+      <Parameter Name="type" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spAllValue_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Event_Unique_ID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Occurrence_year" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Division" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Homicide_Type" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Occurrence_Date" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Hood_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Neighbourhood" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Lat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Long" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="80" />
+  </ComplexType>
+  <ComplexType Name="spFilterValue_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Event_Unique_ID" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Occurrence_year" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Division" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Homicide_Type" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Occurrence_Date" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Hood_ID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Neighbourhood" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Lat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Long" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Country" Nullable="true" MaxLength="80" />
+  </ComplexType>
+</Schema>

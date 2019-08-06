@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="generalDBModelStoreContainer" CdmEntityContainer="generalDBEntities">
+    <EntitySetMapping Name="Homicides">
+      <EntityTypeMapping TypeName="generalDBModel.Homicide">
+        <MappingFragment StoreEntitySet="Homicide">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+          <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+          <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+          <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+          <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spAllValue" FunctionName="generalDBModel.Store.spAllValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="generalDBModel.spAllValue_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+          <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+          <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+          <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+          <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spFilterValue" FunctionName="generalDBModel.Store.spFilterValue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="generalDBModel.spFilterValue_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Event_Unique_ID" ColumnName="Event_Unique_ID" />
+          <ScalarProperty Name="Occurrence_year" ColumnName="Occurrence_year" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="Homicide_Type" ColumnName="Homicide_Type" />
+          <ScalarProperty Name="Occurrence_Date" ColumnName="Occurrence_Date" />
+          <ScalarProperty Name="Hood_ID" ColumnName="Hood_ID" />
+          <ScalarProperty Name="Neighbourhood" ColumnName="Neighbourhood" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

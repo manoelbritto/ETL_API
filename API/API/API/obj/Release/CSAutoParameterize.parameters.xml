@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="generalDBEntities-Web.config Connection String" description="generalDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Crime.csdl|res://*/Models.Crime.ssdl|res://*/Models.Crime.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=generalserverdb.database.windows.net;initial catalog=generalDB;persist security info=True;user id=manoel;password=Filho@2182;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Repository\\ETL\\API\\API\\API\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='generalDBEntities']/@connectionString" />
+  </parameter>
+</parameters>
