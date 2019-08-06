@@ -52,6 +52,7 @@ https://manoelburgos.azurewebsites.net/
  
 
 ## How to call a GET method:
+
 > url/api/Crimes
 
 > http://manoelburgos.azurewebsites.net/api/Crimes
@@ -60,7 +61,7 @@ https://manoelburgos.azurewebsites.net/
 
 ![GitHub Logo](/Screenshots/get_crimes.png)
 
-url/api/Crimes/{id}
+> url/api/Crimes/{id}
 
 > http://manoelburgos.azurewebsites.net/api/Crimes/Other
 
@@ -69,19 +70,22 @@ url/api/Crimes/{id}
 > http://manoelburgos.azurewebsites.net/api/Crimes/Stabbing
 
 > Postman results:
-![GitHub Logo](/Screenshots/get_crimes.png)
 
-# Prerequisites 
+![GitHub Logo](/Screenshots/get_crimes_id.png)
+
+## Prerequisites 
+
 This a list of application that you need to have in your machine:
-Visual Studio 2017 Community or higher
-Visual Studio 2017 SSDT or higher
-SQL Server Management Studio 2017 or higher
-Postman app to test the GET methods 
+1. Visual Studio 2017 Community or higher
+2. Visual Studio 2017 SSDT or higher
+3. SQL Server Management Studio 2017 or higher
+4. Postman app to test the GET methods 
+
 Also, you need to have a Microsoft Azure account. Then, on your Cloud environment, you can create SQL Server database and Web APP server
 
 
 
-# Coding tips
+## Coding tips
 In my WEB API development, I installed the Entity Framework package. And I created some procedures inside the database to be called inside the development
 
 A class that react when you call a GET METHOD
@@ -118,8 +122,8 @@ A class that react when you call a GET METHOD
 ```
 ## Features
 
-1 . C# .NET
+1. C# .NET
 2. T-SQL
 3. SSIS
-4 . RESTFULL API
+4. RESTFULL API
 
