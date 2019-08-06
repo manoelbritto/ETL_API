@@ -11,59 +11,65 @@ Web app integrated with Azure Cloud
 Data comes from the Toronto Police
 https://data.torontopolice.on.ca/pages/homicide
 
-#Workflow
+# Workflow
 
- 
+ ![GitHub Logo](/Screenshots/workflow.png)
 
  
 # ETL – SSIS (Sql Server Integration Service)	
-Control Flow
+> Control Flow
 
 
+![GitHub Logo](/Screenshots/control_flow.png)
 
 
+1. Execute SQL Task, it will execute my SQL command, in this case, a truncate table
+2. ETL_CSV Import that runs a data flow below
+3. In case of success, then File System Task will run. This task will move a .csv file to a different folder
+4. In case of fail, then Send Mail Task with an error message
+
+> Data Flow
+
+![GitHub Logo](/Screenshots/data_flow.png)
+
+1. Flat file Source will read the CSV file
+2. Script Component will do some changes, in this case, it will fill in the columns City and Country because those columns don’t have inside the CSV file
+3. ADO.NET Destination, it connects with SQL Server on the Cloud and integrates the content extracted from CSV file
+
+> SQL Server results:
+
+![GitHub Logo](/Screenshots/db_result.png)
 
 
-
-
-
-
-
-
-1 – Execute SQL Task, it will execute my SQL command, in this case, a truncate table
-2 – ETL_CSV Import that runs a data flow below
-3 – In case of success, then File System Task will run. This task will move a .csv file to a different folder
-4 – In case of fail, then Send Mail Task with an error message
-
-Data Flow
- 
-
-1 – Flat file Source will read the CSV file
-2 – Script Component will do some changes, in this case, it will fill in the columns City and Country because those columns don’t have inside the CSV file
-3 – ADO.NET Destination, it connects with SQL Server on the Cloud and integrates the content extracted from CSV file
-
-# SQL Server results:
-
- 
-
-Web app
+> Web app front end:
 https://manoelburgos.azurewebsites.net/
  
+![GitHub Logo](/Screenshots/webapi_front.PNG)
 
+> API page with features
 
-Doc
+![GitHub Logo](/Screenshots/doc_api.png)
  
 
-How to call a GET method:
-URL/API/Crimes
-http://manoelburgos.azurewebsites.net/api/Crimes
- 
+## How to call a GET method:
+> url/api/Crimes
+
+> http://manoelburgos.azurewebsites.net/api/Crimes
+
+> Postman results:
+
+![GitHub Logo](/Screenshots/get_crimes.png)
 
 url/api/Crimes/{id}
-http://manoelburgos.azurewebsites.net/api/Crimes/Other
-http://manoelburgos.azurewebsites.net/api/Crimes/Shooting
-http://manoelburgos.azurewebsites.net/api/Crimes/Stabbing
- 
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Other
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Shooting
+
+> http://manoelburgos.azurewebsites.net/api/Crimes/Stabbing
+
+> Postman results:
+![GitHub Logo](/Screenshots/get_crimes.png)
 
 # Prerequisites 
 This a list of application that you need to have in your machine:
@@ -109,7 +115,7 @@ A class that react when you call a GET METHOD
             return listValue;
         }
 
-
+```
 ## Features
 
 1 . C# .NET
