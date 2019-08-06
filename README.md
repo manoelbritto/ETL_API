@@ -129,4 +129,5 @@ A class that react when you call a GET METHOD
 2. T-SQL
 3. SSIS
 4. RESTful API
+5. Cloud Microsoft Azure
 
