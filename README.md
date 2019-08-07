@@ -3,11 +3,12 @@ This Project combines ETL using SSIS to extract data from a CSV file. Also, a WE
 
 ### Technology used in this project:
 Microsoft Azure Cloud:
-	SQL SERVER
-	WEB APP
+* SQL SERVER
+* WEB APP
+
 Local Machine:
-ETL with SSIS integrated with SQL Server in the Cloud
-Web app integrated with Azure Cloud
+* ETL with SSIS integrated with SQL Server in the Cloud
+* Web app integrated with Azure Cloud
 
 ## Data Set
 
