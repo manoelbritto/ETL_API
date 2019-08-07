@@ -8,6 +8,7 @@ Microsoft Azure Cloud:
 Local Machine:
 ETL with SSIS integrated with SQL Server in the Cloud
 Web app integrated with Azure Cloud
+
 ## Data Set
 
 Data comes from the Toronto Police
